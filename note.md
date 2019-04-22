@@ -67,8 +67,100 @@
     - 执行时自行选择
     - submit(fn,args,kwargs) fn 异步执行的函数 args，kwargs参数
 ## Future
-- 
 
+# 结构化文件存储
+- xml json
+## XML
+- XML extensibleMarkupLanguage
+    - 标记语言 语言中使用<>的文本字符串标记
+    - 可扩展：用户自定义需要的标记
+    - 描述数据本身 数据的结构和语义
+    - HTML侧重于如何显示web页面的数据
+- XML 文档的构成 05.xml
+    - 处理指令 第一行
+        - 与XML本身处理相关的一些声明或代码
+        - 版本 编码
+    - 根元素 有且只有一个
+    - 子元素
+    - 属性
+    - 内容 标签存储的信息
+    - 注释 说明 标签里面没有注释 <!--     -->
+- 保留字符的处理
+    - 实体引用（转义）
+        & &amp;
+        < &lt;
+        > &gt;
+        ' &apos;
+        " &quot; 
+    - 把含保留字符的部分放入CDATA块内部 
+        <![CDATA[代码块]]>
+    
+- 命名规则
+    - Pascal命名法
+    - 第一个字母大写
+    - 大小写严格区分
+    - 配对的标签一致
+- 命名空间
+    - 防止命名冲突 重复有相同元素的内容
+    - xmlns 放在属性的位置
+        xmls:名称="统一资源定位"
+## XML访问
+### 读取
+- SAX 和 DOM
+- SAX Simple API for XML
+    - 基于事件驱动
+    - 解析器和事件处理
+    - 特点
+        - 块
+        - 流式读取
+- DOM
+    - XML编程接口
+    - XML在缓存中以属性结构保存，读取
+    - 用途
+        - 定位和浏览XML任何一个节点信息
+        - 添加删除相应内容
+    - minidom
+    - etree
+### 写入 06.py
+- 更改
+    - ele.set
+    - ele.append
+    - ele.remove
+- 生成创建
+    - SubElement
+    - minidom 写入
+    - etree写入
+## JSON JavaScriptObjectNotation
+- 轻量级的数据交换格式 基于ECMAScript
+- 键值对形式的数据集
+    - key ：字符串
+    - value：字符串 数字 列表 json
+    - json用大括号包裹
+    - 键值对用逗号隔开
+    student={
+        "name":"jasa",
+        "age":18}
+- json和python格式转换
+    - 字符串 字符串
+    - 数字 数字
+    - 队列 list
+    - 对象 dict
+    - 布尔值 布尔值
+- python for json 
+    - json包
+    - 转换 07.py
+        - json.dumps():编码 python-->json
+        - json.loads():解码 json-->python
+    - python读取json文件
+        - json.dump():内容写入文件
+        - json.load():json文件内容读入python
+
+# 正则表达式 RegularExpression,re
+- 用于使用单子字符串来描述，匹配符合某个规则的字符串
+- 用来检索替换某些模式的文本
+- 
+    
+    
         
     
 
