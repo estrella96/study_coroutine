@@ -280,6 +280,21 @@
     - HOST 主机地址
     - DIR 目录 
     - File 文件名
+    
+# mail 编程
+- 发送
+    - MUA-->MTA SMTP
+- 接收
+    - MDA-->MUA POP3 IMAP
+- 准备
+    - 第三方邮箱需要特殊设置 授权码
+- 编程
+    - SMTP
+        - 使用email模块构建邮件
+        - 使用smtplib模块发送邮件
+    - POP3
+        - poplib下载邮件结构体原始内容
+        - email解析邮件内容
         
     
     
